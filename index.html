@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Neighbourhood | Estética B&N</title>
+    <style>
+        /* Estilos globales basados en la estética monocromática de la banda */
+        * {
+            margin: 0;
+            padding: 0;
+            box-box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0d0d0d;
+            border-bottom: 1px solid #262626;
+            padding: 2rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        header p {
+            color: #8c8c8c;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 4px solid #ffffff;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            color: #cccccc;
+            margin-bottom: 1rem;
+        }
+
+        /* Grid de Integrantes */
+        .grid-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .member-card {
+            background-color: #0d0d0d;
+            border: 1px solid #262626;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            background-color: #1a1a1a;
+            border-color: #ffffff;
+        }
+
+        .member-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-card p {
+            font-size: 0.85rem;
+            color: #8c8c8c;
+            margin-bottom: 0;
+        }
+
+        /* Lista de Álbumes */
+        .discography {
+            list-style: none;
+        }
+
+        .album-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0d0d0d;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #262626;
+        }
+
+        .album-item:hover {
+            border-color: #595959;
+        }
+
+        .album-year {
+            color: #8c8c8c;
+            font-weight: bold;
+        }
+
+        /* Sección de interacción */
+        .interactive-box {
+            background-color: #111111;
+            border: 2px dashed #333333;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .btn-action {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-action:hover {
+            background-color: #cccccc;
+        }
+
+        #lyric-display {
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #a6a6a6;
+            min-height: 24px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #595959;
+            font-size: 0.8rem;
+            border-top: 1px solid #262626;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Neighbourhood</h1>
+        <p>THE NBHD · ESTILE monocromático y alternativo</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Biografía -->
+        <section id="about">
+            <h2>Acerca de la Banda</h2>
+            <p>Formada en Newbury Park, California en 2011, <strong>The Neighbourhood</strong> (estilizado como THE NBHD) es una banda estadounidense de rock alternativo conocida mundialmente por su distintiva estética visual en blanco y negro y su fusión única de indie rock, pop y R&B.</p>
+            <p>Alcanzaron el éxito global gracias a su sencillo "Sweater Weather", el cual se convirtió en un himno generacional en las plataformas digitales.</p>
+        </section>
+
+        <!-- Integrantes -->
+        <section id="members">
+            <h2>Integrantes</h2>
+            <div class="grid-members">
+                <div class="member-card">
+                    <h3>Jesse Rutherford</h3>
+                    <p>Voz Principal</p>
+                </div>
+                <div class="member-card">
+                    <h3>Jeremy Freedman</h3>
+                    <p>Guitarra / Coros</p>
+                </div>
+                <div class="member-card">
+                    <h3>Zach Abels</h3>
+                    <p>Guitarra Principal</p>
+                </div>
+                <div class="member-card">
+                    <h3>Michael Margott</h3>
+                    <p>Bajo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discografía -->
+        <section id="albums">
+            <h2>Álbumes de Estudio</h2>
+            <ul class="discography">
+                <li class="album-item">
+                    <span>I Love You.</span>
+                    <span class="album-year">2013</span>
+                </li>
+                <li class="album-item">
+                    <span>Wiped Out!</span>
+                    <span class="album-year">2015</span>
+                </li>
+                <li class="album-item">
+                    <span>The Neighbourhood</span>
+                    <span class="album-year">2018</span>
+                </li>
+                <li class="album-item">
+                    <span>Chip Chrome & The Mono-Tones</span>
+                    <span class="album-year">2020</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sección Interactiva con JavaScript -->
+        <section id="interactive">
+            <h2>Generador de Frases</h2>
+            <div class="interactive-box">
+                <p>Haz clic abajo para obtener un fragmento de sus canciones más icónicas:</p>
+                <button class="btn-action" onclick="generateLyric()">Obtener Frase</button>
+                <p id="lyric-display">"Cause it's too cold for you here and now..."</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; Sitio Fan de The Neighbourhood.</p>
+    </footer>
+
+    <script>
+        // Un pequeño script interactivo para cambiar frases de la banda
+        const lyrics = [
+            '"And now let me hold both your hands in the holes of my sweater..." — Sweater Weather',
+            '"I change by the hour, I mcsh with the power..." — Daddy Issues',
+            '"Lost in translation with no explanation..." — Softcore',
+            '"Every day is a dynamic adventure when you\'re living it with you..." — Scary Love',
+            '"I\'m a little bit generic, \'cause I\'m generic for you..." — Reflections'
+        ];
+
+        function generateLyric() {
+            const display = document.getElementById('lyric-display');
+            const randomIndex = Math.floor(Math.random() * lyrics.length);
+            display.innerText = lyrics[randomIndex];
+        }
+    </script>
+</body>
+</html>
