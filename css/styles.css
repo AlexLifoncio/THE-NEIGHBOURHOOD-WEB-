@@ -26,7 +26,7 @@ body {
     color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
-    background-image: url('/img/fondo.jpg');
+    background-image: url('../img/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -384,6 +384,225 @@ footer p {
     font-size: 0.875rem;
 }
 
+/* Autenticación */
+.auth-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 1.5rem 4rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    background: rgba(13, 13, 13, 0.92);
+    border: 1px solid var(--dark-gray);
+    padding: 3rem 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.auth-card h1 {
+    font-size: 1.75rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.auth-subtitle {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--medium-gray);
+}
+
+.form-group input,
+.form-group textarea {
+    background: var(--black);
+    border: 1px solid var(--dark-gray);
+    color: var(--white);
+    padding: 0.85rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--dark-gray);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.form-group input[type="file"] {
+    padding: 0.65rem;
+    color: var(--medium-gray);
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button {
+    background: var(--dark-gray);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+    background: var(--medium-gray);
+}
+
+.form-hint {
+    font-size: 0.75rem;
+    color: var(--medium-gray);
+}
+
+.auth-message {
+    min-height: 1.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+    color: var(--medium-gray);
+}
+
+.auth-message.error {
+    color: var(--accent-red);
+}
+
+.auth-message.success {
+    color: var(--accent-gold);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-action:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--medium-gray);
+}
+
+.auth-footer a {
+    color: var(--accent-gold);
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-bio {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-form {
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+#logout-btn {
+    margin-top: 1.25rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--medium-gray);
+}
+
+.btn-secondary:hover {
+    background: var(--dark-gray);
+}
+
+.profile-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.profile-meta dt {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--medium-gray);
+    margin-bottom: 0.25rem;
+}
+
+.profile-meta dd {
+    font-size: 0.95rem;
+    color: var(--white);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -392,5 +611,13 @@ footer p {
     
     .section {
         padding: 4rem 1rem;
+    }
+
+    .auth-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .profile-meta {
+        grid-template-columns: 1fr;
     }
 }
