@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inicia sesión en la comunidad de fans de The Neighbourhood.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Iniciar sesión | The Neighbourhood</title>
+    <link rel="icon" type="image/png" href="../img/LOGO.jpg" sizes="64x64">
+</head>
+<body data-page="login">
+    <header>
+        <nav>
+            <div class="logo"><a href="../index.html">THE NBHD</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-card">
+            <h1>Bienvenido de vuelta</h1>
+            <p class="auth-subtitle">Entra con tu cuenta para acceder a la comunidad.</p>
+
+            <form id="login-form" class="auth-form" novalidate>
+                <div class="form-group">
+                    <label for="login-email">Correo electrónico</label>
+                    <input type="email" id="login-email" name="email" autocomplete="email" required placeholder="tucorreo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="password" autocomplete="current-password" required placeholder="Tu contraseña">
+                </div>
+
+                <p class="auth-message" role="status" aria-live="polite"></p>
+
+                <button type="submit" class="btn-action btn-block">Iniciar sesión</button>
+            </form>
+
+            <p class="auth-footer">¿Aún no tienes cuenta? <a href="registro.html">Regístrate</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Sitio Fan de The Neighbourhood.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-client.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

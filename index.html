@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>The Neighbourhood | Estética Alternativa</title>
-    <link rel="icon" type="image/png" href="/img/LOGO.jpg" sizes="64x64"> 
+    <meta name="description" content="Comunidad de fans de The Neighbourhood: historia, integrantes, discografía, galería y foro.">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>The Neighbourhood | Comunidad Fan</title>
+    <link rel="icon" type="image/png" href="img/LOGO.jpg" sizes="64x64">
 </head>
-<body>
+<body data-page="home">
 <header>
         <nav>
             <div class="logo">THE NBHD</div>
@@ -16,6 +17,7 @@
                 <li><a href="#members">Integrantes</a></li>
                 <li><a href="#albums">Discografía</a></li>
                 <li><a href="#interactive">Interactivo</a></li>
+                <li><a href="pages/login.html" id="nav-auth-link">Acceso</a></li>
             </ul>
         </nav>
         <h1>The Neighbourhood</h1>
@@ -43,28 +45,28 @@
             <div class="grid-members">
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="/img/Jesse.jpg" alt="Jesse Rutherford">
+                        <img src="img/Jesse.jpg" alt="Jesse Rutherford">
                     </div>
                     <h3>Jesse Rutherford</h3>
                     <p>Voz Principal</p>
                 </div>
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="/img/Jeremy.jpg" alt="Jeremy Freedman">
+                        <img src="img/Jeremy.jpg" alt="Jeremy Freedman">
                     </div>
                     <h3>Jeremy Freedman</h3>
                     <p>Guitarra / Coros</p>
                 </div>
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="/img/Zach.jpg" alt="Zach Abels">
+                        <img src="img/Zach.jpg" alt="Zach Abels">
                     </div>
                     <h3>Zach Abels</h3>
                     <p>Guitarra Principal</p>
                 </div>
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="/img/Michael.jpg" alt="Michael Margott">
+                        <img src="img/Michael.jpg" alt="Michael Margott">
                     </div>
                     <h3>Michael Margott</h3>
                     <p>Bajo</p>
@@ -81,28 +83,28 @@
             <ul class="discography">
                 <li class="album-item">
                     <div class="album-cover">
-                        <img src="/img/I love you.jpg" alt="I Love You">
+                        <img src="img/I love you.jpg" alt="I Love You">
                     </div>
                     <span>I Love You.</span>
                     <span class="album-year">2013</span>
                 </li>
                 <li class="album-item">
                     <div class="album-cover">
-                        <img src="/img/Wiped out.jpg" alt="Wiped Out">
+                        <img src="img/Wiped out.jpg" alt="Wiped Out">
                     </div>
                     <span>Wiped Out!</span>
                     <span class="album-year">2015</span>
                 </li>
                 <li class="album-item">
                     <div class="album-cover">
-                        <img src="/img/The Neighbourhood.jpg" alt="The Neighbourhood">
+                        <img src="img/The Neighbourhood.jpg" alt="The Neighbourhood">
                     </div>
                     <span>The Neighbourhood</span>
                     <span class="album-year">2018</span>
                 </li>
                 <li class="album-item">
                     <div class="album-cover">
-                        <img src="/img/Chip Chrome & The Mono-Tones.jpg" alt="Chip Chrome & The Mono-Tones">
+                        <img src="img/Chip Chrome & The Mono-Tones.jpg" alt="Chip Chrome & The Mono-Tones">
                     </div>
                     <span>Chip Chrome & The Mono-Tones</span>
                     <span class="album-year">2020</span>
@@ -119,22 +121,22 @@
             <div class="gallery-grid">
                 <!-- CAMBIA SOLO EL ATRIBUTO src POR EL NOMBRE DE TU IMAGEN (guardada en la carpeta /img) -->
                 <div class="gallery-item">
-                    <img src="/img/Galeria1.jpg" alt="Imagen de galería 1">
+                    <img src="img/Galeria1.jpg" alt="Imagen de galería 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="/img/Galeria2.jpg" alt="Imagen de galería 2">
+                    <img src="img/Galeria2.jpg" alt="Imagen de galería 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="/img/Galeria3.jpg" alt="Imagen de galería 3">
+                    <img src="img/Galeria3.jpg" alt="Imagen de galería 3">
                 </div>
                 <div class="gallery-item">
-                    <img src="/img/Galeria4.jpg" alt="Imagen de galería 4">
+                    <img src="img/Galeria4.jpg" alt="Imagen de galería 4">
                 </div>
                 <div class="gallery-item">
-                    <img src="/img/Galeria5.jpg" alt="Imagen de galería 5">
+                    <img src="img/Galeria5.jpg" alt="Imagen de galería 5">
                 </div>
                 <div class="gallery-item">
-                    <img src="/img/Galeria6.jpg" alt="Imagen de galería 6">
+                    <img src="img/Galeria6.jpg" alt="Imagen de galería 6">
                 </div>
             </div>
         </section>
@@ -153,7 +155,10 @@
         </section>
 
     </div>
-    <script src="/js/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/javascript.js"></script>
     <footer>
         <p>&copy; Sitio Fan de The Neighbourhood.</p>
     </footer>

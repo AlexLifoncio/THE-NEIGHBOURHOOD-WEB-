@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea tu cuenta en la comunidad de fans de The Neighbourhood.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Registro | The Neighbourhood</title>
+    <link rel="icon" type="image/png" href="../img/LOGO.jpg" sizes="64x64">
+</head>
+<body data-page="registro">
+    <header>
+        <nav>
+            <div class="logo"><a href="../index.html">THE NBHD</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-card">
+            <h1>Únete a la comunidad</h1>
+            <p class="auth-subtitle">Crea tu cuenta para compartir con otros fans de The Neighbourhood.</p>
+
+            <form id="registro-form" class="auth-form" novalidate>
+                <div class="form-group">
+                    <label for="registro-username">Nombre de usuario</label>
+                    <input type="text" id="registro-username" name="username" autocomplete="username" minlength="3" maxlength="20" required placeholder="ej. sweaterfan">
+                </div>
+                <div class="form-group">
+                    <label for="registro-email">Correo electrónico</label>
+                    <input type="email" id="registro-email" name="email" autocomplete="email" required placeholder="tucorreo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="registro-password">Contraseña</label>
+                    <input type="password" id="registro-password" name="password" autocomplete="new-password" minlength="6" required placeholder="Mínimo 6 caracteres">
+                </div>
+                <div class="form-group">
+                    <label for="registro-confirm">Confirmar contraseña</label>
+                    <input type="password" id="registro-confirm" name="confirm" autocomplete="new-password" minlength="6" required placeholder="Repite tu contraseña">
+                </div>
+
+                <p class="auth-message" role="status" aria-live="polite"></p>
+
+                <button type="submit" class="btn-action btn-block">Crear cuenta</button>
+            </form>
+
+            <p class="auth-footer">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Sitio Fan de The Neighbourhood.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-client.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
